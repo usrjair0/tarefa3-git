@@ -1,0 +1,32 @@
+git init
+echo "primeiro arquivo" > arquivo1.txt
+echo "segundo arquivo" > arquivo2.txt
+echo "terceiro arquivo" > arquivo3.txt
+git add .
+git commit -m "commit inicial: adicionado 3 arquivos .txt"
+echo "arquivo 1 alterado" >> arquivo1.txt
+echo "arquivo 2 alterado" >> arquivo2.txt
+git status
+git diff
+git add .
+git commit -m "Alterações em arquivo1 e arquivo2"
+git log
+git log --oneline
+git log --graph
+git log --decorate
+git log --all
+git revert HEAD
+echo "mudança temporária" >> arquivo3.txt
+git stash
+git checkout -b ramo-temp
+git checkout master
+git stash pop
+git reflog
+git tag -a v1.0 -m "versão estável 1.0" 713ee0c
+git remote add origin https://github.com/usrjair0/tarefa3-git.git
+git push -u origin master
+git push origin v1.0
+touch comandos.txt
+git add .
+git commit -m "Adicionado comandos.txt com os comandos da tarefa"
+git push
